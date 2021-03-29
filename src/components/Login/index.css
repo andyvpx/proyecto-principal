@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+.root {
+    width: '85ch';
+    margin: 1px;
+}
+
+.signin-signup {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 80%;
+    width: 30%;
+    transition: 1s 0.7s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+}
+
+
+.info-login {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 28%;
+    width: 45%;
+    transition: 1s 0.7s ease-in-out;
+    z-index: 5;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 5rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  
+  .sesion{
+    display: inline-block;
+    position: relative;
+    font-family: 'TechnicLite', Courier, monospace;
+    font-size: 35px;
+    font-weight: 100;
+    color: #11171F;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  
+  
+  #linea{
+    display: inline-block;
+    position: relative;
+    margin-left: 50px;  
+  }
+  
+  .logo{
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* INFO LOGIN */
+  .logo-info{
+    color: white;
+    top: 0px;
+    margin-left: 10px;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .titulo-proyecto{
+    font-family:'Gidole', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 200px;
+    margin-left: 130px;
+  
+  }
+  
+  
+  
+  .texto{
+    font-family: 'Humnst777 Blk BT', Courier, monospace;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 320px;
+  
+  }
+  /* BOTONES */
+  
+  
+  #Uno{
+    font-family: 'Gidole', Courier, monospace;
+    font-size: 18px;
+    padding: 1rem;
+    background-image: linear-gradient(-40deg,#141B25 0%, #141B25 100%);
+    margin-left: -5%;
+    margin-right: -5%;
+    margin-top: 40px;
+    height: 55px;
+    width: 90%;
+  }
+  
+  .ButtonDos{
+    font-family: 'Gidole', Courier, monospace;
+    font-size: 18px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    height: 55px;
+    margin-top: 10px;
+    width: 90%; 
+  
+  }
+  
+  
+  
+  /*container1*/
+  .container:before {
+    content: "";
+    position: fixed ;
+    height: 120%;
+    width: 120%;
+    border-radius: 100rem;
+    top: -15%;
+    right: 40%;
+    background-image: linear-gradient(-40deg,#141B25 0%, #141B25 100%);
+    transition: 1.8s ease-in-out;
+    z-index: 5;
+  }
+  /*container2*/
+  
+  .container2:before {
+    content: "";
+    position: fixed ;
+    height: 120%;
+    width: 120%;
+    border-radius: 100rem;
+    top: -15%;
+    right: 58%;
+    background-image: linear-gradient(-40deg, #171E29 0%, #171E29 100%);
+    transition: 1.8s ease-in-out;
+    z-index: 5;
+  }
+  
+  /*container3*/
+  
+  .container3:before {
+    content: "";
+    position: fixed ;
+    height: 900px;
+    width: 400rem;
+    border-radius: 100rem;
+    top: 36%;
+    right: 65%;
+    background-image: linear-gradient(-70deg, #172130 0%, #172130 100%);
+    opacity: 0.6;
+    transition: 1.8s ease-in-out;
+    z-index: 5;
+    box-sizing: content-box;
+  }
+  
+  /*container4*/
+  
+  .container4:before {
+    position: fixed ;
+    height: 900px;
+    width: 100rem;
+    border-radius: 100rem;
+    top: 36%;
+    right: 65%;
+    background-image: linear-gradient(-70deg, #0000 0%, #0000 100%);
+    opacity: 0.4;
+    transition: 1.8s ease-in-out;
+    z-index: 5;
+    box-sizing: content-box;
+  }
+  
+  .notas-info{
+    position: fixed;
+    width: 1120px;
+    height: 540px;
+    top: 479px;
+    z-index: 5;
+  
+  }
+  
+  
+  
+  /* ANIMATION */
+  
+  @media (max-width: 870px) {
+    .container {
+      min-height: 800px;
+      height: 100vh;
+    }
+    .signin-signup {
+      width: 100%;
+      top: 95%;
+      transform: translate(-50%, -100%);
+      transition: 1s 0.8s ease-in-out;
+    }
+  
+    .signin-signup,
+    .container.sign-up-mode .signin-signup {
+      left: 50%;
+    }
+  
+    .panels-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
+    }
+  
+    .panel {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2.5rem 8%;
+      grid-column: 1 / 2;
+    }
+  
+    .right-panel {
+      grid-row: 3 / 4;
+    }
+  
+    .left-panel {
+      grid-row: 1 / 2;
+    }
+  
+    .image {
+      width: 200px;
+      transition: transform 0.9s ease-in-out;
+      transition-delay: 0.6s;
+    }
+  
+    .panel .content {
+      padding-right: 15%;
+      transition: transform 0.9s ease-in-out;
+      transition-delay: 0.8s;
+    }
+  
+    .panel h3 {
+      font-size: 1.2rem;
+    }
+  
+    .panel p {
+      font-size: 0.7rem;
+      padding: 0.5rem 0;
+    }
+  
+    .btn.transparent {
+      width: 110px;
+      height: 35px;
+      font-size: 0.7rem;
+    }
+  
+    .container:before {
+      width: 1500px;
+      height: 1500px;
+      transform: translateX(-50%);
+      left: 30%;
+      bottom: 68%;
+      right: initial;
+      top: initial;
+      transition: 2s ease-in-out;
+    }
+  
+    .container.sign-up-mode:before {
+      transform: translate(-50%, 100%);
+      bottom: 32%;
+      right: initial;
+    }
+  
+    .container.sign-up-mode .left-panel .image,
+    .container.sign-up-mode .left-panel .content {
+      transform: translateY(-300px);
+    }
+  
+    .container.sign-up-mode .right-panel .image,
+    .container.sign-up-mode .right-panel .content {
+      transform: translateY(0px);
+    }
+  
+    .right-panel .image,
+    .right-panel .content {
+      transform: translateY(300px);
+    }
+  
+    .container.sign-up-mode .signin-signup {
+      top: 5%;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  
+  
