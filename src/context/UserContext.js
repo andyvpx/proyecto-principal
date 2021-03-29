@@ -1,10 +1,10 @@
 import React, {createContext, useState} from 'react';
 
-// crear el context
+//       [ Crear el context ]       
 export const UserContext = createContext({});
 
 const UserContextProvider = ({children}) => {
-    // state del provider
+    //       [ State del provider ]  
     const [username, setUsername] = useState('');
     const [usernameAPI, setUsernameAPI] = useState('');
 

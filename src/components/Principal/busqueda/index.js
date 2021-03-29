@@ -8,8 +8,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       position: 'absulote',
-      width: '20ch',
+      width: '40ch',
       left: '19ch',
+      color: 'white'
     },
   },
 }));

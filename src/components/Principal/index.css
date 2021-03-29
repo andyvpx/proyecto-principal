@@ -1,5 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-.container{
+}
+
+body{
+  background: rgb(15,21,29);
+  background: linear-gradient(90deg, rgba(15,21,29,1) 0%, rgba(16,34,42,1) 47%, rgba(28,73,93,1) 100%);
+  }
+
+@font-face {
+    font-family: Swis721;
+    src: url(../../fonts/Swis721_BT_Bold.ttf);
+}
+
+.contenedor{
     position: relative;
     display: inline-block;
     text-align: center;
@@ -7,33 +23,38 @@
   
   
   .Trazado{
-    width: 49.6rem;
+    width: 71.61rem;
     left: -1rem;
-    top: -2rem;
+    top: 0rem;
     position: absolute;
   }
+  
   
   .FotoUsuario{
     position: absolute;
     width: 48px;
-    left: 2px;
-   
-    
+    top: 35px;
+    left: 52px;
   }
   
   #BotonPrincipal{
+    font-family: 'Swis721', Courier, monospace;
     border-radius: 50px;
+    background: #10161E;
     position: absolute;
-    top: 8px;
-    left: 70px;
+    top: 40px;
+    left: 120px;
     width: 13rem;
   }
 
   
 #NombreTab{
+    font-family: 'Didact Gothic', Courier, monospace;
+    font-size: 17px;
     color: rgb(255, 255, 255);
-    left: 120px;
+    left: 60px;
 }
+
 #input-with-icon-textfield{
     color:rgb(255, 255, 255);
 }
@@ -42,5 +63,6 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    left: 78rem;
+    top: 2rem;
+    left: 108rem;
 }

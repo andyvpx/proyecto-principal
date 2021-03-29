@@ -1,20 +1,20 @@
+//       [ Librerias ]       
 import React, {useState, useContext} from 'react';
 import { useLocation } from 'wouter';
 import { UserContext } from '../../../context/UserContext';
 
-// API
+//       [ API ]       
 import GoogleLogin from 'react-google-login';
 
-// Estilos
+//       [ Estilos ]       
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import {faSpotify } from '@fortawesome/free-brands-svg-icons';
 import InputIcon from '@material-ui/icons/Input';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../index.css';
 import logo from '../../../img/logo.png';
 
+//       [ Estilos ]       
 const useStyles = makeStyles((theme) => ({
     root: {
       '& .MuiTextField-root': {
@@ -40,9 +40,6 @@ const Formulario = () => {
     const [correo, setCorreo] = useState('');
     const [contraseña, setContraseña] = useState('');
 
-    //       [ Estados Ingreso por API ]       
-    const [nombreAPI, setNombreAPI] = useState('');
-
     //       [ useLocation ]     
     const [, navigate] = useLocation();    
 
@@ -59,7 +56,7 @@ const Formulario = () => {
 
     /* [ Google API ] */
     const responseGoogle = (response) => {
-        setUsernameAPI(response.Rs.BT);
+        setUsernameAPI(response.Rs.BT); 
         navigate('/inicio')
       }
 

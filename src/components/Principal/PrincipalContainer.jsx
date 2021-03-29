@@ -5,7 +5,7 @@ import './index.css';
 
 const PrincipalContainer = () => {
     return ( 
-        <div className="contenedor">
+        <div className="trazado">
           <img src={trazado} alt="" className="Trazado"/>
           <Header />
         </div>

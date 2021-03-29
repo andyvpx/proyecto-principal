@@ -1,7 +1,7 @@
-import React, {useContext} from 'react';
-import {Link} from 'wouter';
+import React, {useContext, useState} from 'react';
 import { UserContext } from '../../../context/UserContext';
 import Busqueda from "../busqueda/index";
+import { useLocation } from 'wouter';
 
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -11,7 +11,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import SendIcon from '@material-ui/icons/Send';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import '../index.css';
 
@@ -50,12 +50,12 @@ const StyledMenu = withStyles({
 
   
 const Header = () => {
+      //       [ useLocation ]     
+      const [, navigate] = useLocation();    
+
     //const isLogged = false;
     const { username, setUsername } = useContext(UserContext);
     const { usernameAPI, setUsernameAPI } = useContext(UserContext);
-
-    const ifUsername = username;
-    const ifUsernameAPI = usernameAPI;
 
     /*
             <header className="gf-header">
@@ -71,7 +71,13 @@ const Header = () => {
         </header>
     */
 
-        const [anchorEl, setAnchorEl] = React.useState(null);
+        const handleSesion = () => {
+          setUsername('');
+          setUsernameAPI('');
+          navigate('/');
+        };
+
+        const [anchorEl, setAnchorEl] = useState(null);
 
         const handleClick = (event) => {
             setAnchorEl(event.currentTarget);
@@ -87,8 +93,7 @@ const Header = () => {
           indicatorColor="primary"
           textColor="primary"
           centered
-        >
-             
+        >  
             <img src={userfoto} alt="" className="FotoUsuario" />
             <Button
               endIcon={<KeyboardArrowDownIcon />}
@@ -96,10 +101,13 @@ const Header = () => {
               id="BotonPrincipal"
               aria-controls="customized-menu"
               aria-haspopup="true"
+              color="primary"
               variant="contained"
               onClick={handleClick}
-            >
-            PEREZ PEREZ
+            > 
+
+            {username} {usernameAPI}
+            
             </Button>
             <StyledMenu
               id="customized-menu"
@@ -110,17 +118,19 @@ const Header = () => {
               >
               <StyledMenuItem>
               <ListItemIcon>
-                <SendIcon fontSize="small" />
+                <ExitToAppIcon fontSize="small" />
               </ListItemIcon>
-              <ListItemText primary="Sent mail" />
+              <ListItemText onClick={handleSesion}>
+                    Cerrar sesión
+              </ListItemText>
                 </StyledMenuItem>
               </StyledMenu>
             <Busqueda />
-            <Tab id="NombreTab" label="INICIO" />
-            <Tab id="NombreTab" label="TOP" />
-            <Tab id="NombreTab" label="HITS" />
-            <Tab id="NombreTab"label="NEWS" />
-            <Tab id="NombreTab" label="NEWSLETTER" />
+            <Tab id="NombreTab" label="Inicio" />
+            <Tab id="NombreTab" label="Top" />
+            <Tab id="NombreTab" label="Hits" />
+            <Tab id="NombreTab"label="News" />
+            <Tab id="NombreTab" label="Newsletter" />
             <img src={iconblanco} id="FotoPrincipal" alt=""/>
         </Tabs>
       </>
