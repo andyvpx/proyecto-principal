@@ -44,8 +44,7 @@ const Formulario = () => {
     const [, navigate] = useLocation();    
 
     //       [ Extraer valores del context ]     
-    const { setUsername } = useContext(UserContext);
-    const { setUsernameAPI } = useContext(UserContext);
+    const { setUsername, setUsernameAPI, setFotoPerfil } = useContext(UserContext);
 
     //       [ onClick datos formulario ]     
     const handleSubmit = e => {
@@ -57,17 +56,21 @@ const Formulario = () => {
     /* [ Google API ] */
     const responseGoogle = (response) => {
         setUsernameAPI(response.Rs.BT); 
+        console.log(response);
+        setFotoPerfil(response.profileObj.imageUrl);
         navigate('/inicio')
       }
 
+      // profileObj.imageUrl
+
     return ( 
         <form className={clases.root} noValidate autoComplete="off">
-        <img src={logo} alt="Logo App" className="logo"/>
+        <img src={logo} alt="Logo App" className="logo"/>   
         <h1 className="sesion">Iniciar Sesión</h1>
         <div className={clases.linea}/>
         <TextField 
             id="outlined-basic"
-            label="Nombre Completo" 
+            label="Nombre de usuario" 
             variant="outlined" 
             name="nombre"
             onChange={e => setNombre(e.target.value)} 
@@ -75,7 +78,7 @@ const Formulario = () => {
             />
         <TextField 
             id="outlined-basic"
-            label="Correo Electronico" 
+            label="Correo electrónico" 
             variant="outlined" 
             type="email"
             name="correo"

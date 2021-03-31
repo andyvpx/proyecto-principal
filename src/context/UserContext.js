@@ -7,6 +7,7 @@ const UserContextProvider = ({children}) => {
     //       [ State del provider ]  
     const [username, setUsername] = useState('');
     const [usernameAPI, setUsernameAPI] = useState('');
+    const [fotoPerfil, setFotoPerfil] = useState('');
 
 
     return ( 
@@ -14,8 +15,10 @@ const UserContextProvider = ({children}) => {
             value={{
                 username,
                 usernameAPI,
+                fotoPerfil,
                 setUsername,
-                setUsernameAPI
+                setUsernameAPI,
+                setFotoPerfil
             }}>
             {children}
         </UserContext.Provider>

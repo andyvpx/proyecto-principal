@@ -4,14 +4,15 @@ import { Route, Switch} from 'wouter';
 import Login from './components/Login/LoginContainer';
 import Principal from './components/Principal/PrincipalContainer';
 import UserContextProvider from './context/UserContext';
+import TrendingsProvider from './context/TrendingsContext';
 
-import './App.css';
 
 
 function App() {
 
   return (
     <UserContextProvider>
+      <TrendingsProvider>
       <Switch>  
         <Route path="/" exact>
           <Login/>
@@ -20,6 +21,7 @@ function App() {
           <Principal/>
         </Route>
       </Switch>
+      </TrendingsProvider>
     </UserContextProvider>
   );
 }

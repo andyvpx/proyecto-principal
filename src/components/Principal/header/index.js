@@ -13,7 +13,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import '../index.css';
+import '../Principal.css';
+import { makeStyles } from '@material-ui/core/styles';
 
 // Imagenes
 import userfoto from '../../../img/usuario.png';
@@ -24,6 +25,9 @@ const StyledMenu = withStyles({
     paper: {
       border: '1px solid #d3d4d5',
     },
+    fondo: {
+      background: 'black'
+    }
   
   })((props) => (
     <Menu
@@ -41,7 +45,14 @@ const StyledMenu = withStyles({
     />
   ));
   
-  
+  //       [ Estilos ]       
+const useStyles = makeStyles((theme) => ({
+
+  fondo: {
+    background: 'black'
+  }
+}));
+
   const StyledMenuItem = withStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -50,12 +61,14 @@ const StyledMenu = withStyles({
 
   
 const Header = () => {
+    const clases = useStyles();
       //       [ useLocation ]     
       const [, navigate] = useLocation();    
 
     //const isLogged = false;
     const { username, setUsername } = useContext(UserContext);
     const { usernameAPI, setUsernameAPI } = useContext(UserContext);
+    const { fotoPerfil, setFotoPerfil } = useContext(UserContext);
 
     /*
             <header className="gf-header">
@@ -74,6 +87,7 @@ const Header = () => {
         const handleSesion = () => {
           setUsername('');
           setUsernameAPI('');
+          setFotoPerfil('');
           navigate('/');
         };
 
@@ -88,13 +102,19 @@ const Header = () => {
         };
 
     return ( 
-        <>
+        <div>
+
         <Tabs
           indicatorColor="primary"
           textColor="primary"
           centered
         >  
-            <img src={userfoto} alt="" className="FotoUsuario" />
+        {
+          fotoPerfil === ''
+          ? <img src={userfoto} alt="" className="FotoUsuario" />
+          : <img src={fotoPerfil} alt="" className="FotoUsuarioApi" />
+        }
+            
             <Button
               endIcon={<KeyboardArrowDownIcon />}
               className="BotonPrincipal"
@@ -105,10 +125,11 @@ const Header = () => {
               variant="contained"
               onClick={handleClick}
             > 
-
+            
             {username} {usernameAPI}
             
             </Button>
+            
             <StyledMenu
               id="customized-menu"
               anchorEl={anchorEl}
@@ -133,7 +154,8 @@ const Header = () => {
             <Tab id="NombreTab" label="Newsletter" />
             <img src={iconblanco} id="FotoPrincipal" alt=""/>
         </Tabs>
-      </>
+
+      </div>
      );
 }
  

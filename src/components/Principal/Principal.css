@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Swis721;
+    src: url(../../fonts/Swis721_BT_Bold.ttf);
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+    
+  
+  .Trazado{
+    width: 71.61rem;
+    left: -4rem;
+    top: 0rem;
+    position: absolute;
+  }
+  
+  
+  .FotoUsuario{
+    position: absolute;
+    width: 48px;
+    top: 35px;
+    left: 52px;
+  }
+
+  .FotoUsuarioApi{
+    position: absolute;
+    border-radius: 50px;
+    width: 48px;
+    box-shadow: 3px 4px 3px 1px rgba(20, 27, 37, 0.2);
+    top: 35px;
+    left: 52px;
+  }
+  
+  #BotonPrincipal{
+    font-family: 'Swis721', C ourier, monospace;
+    border-radius: 50px;
+    background: #10161E;
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    width: 13rem;
+  }
+p{
+  position: fixed;
+  left: 500px;
+}
+  
+#NombreTab{
+    font-family: 'Didact Gothic', Courier, monospace;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    left: 60px;
+}
+
+#input-with-icon-textfield{
+    color:rgb(255, 255, 255);
+}
+
+#FotoPrincipal{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 2rem;
+    left: 108rem;
+}
+
+.contacto{
+  position:relative;
+  margin-left: 812px;
+  top: 110px;
+}
+
+.subtitulo{
+  position: fixed;
+  font-family: 'ISOCP2', Courier, monospace;
+  color: white;
+  font-size: 25px;
+  right: 673px;
+  top: 180px;
+}
+
+.subtitulo:before{
+  content: "";
+  display: block;
+  width: 110px;
+  height: 2px;
+  background: #707070;
+  position: absolute;
+  left: -130px;
+  top: 50%;
+
+}
+
+.subtitulo:after{
+  content: "";
+  display: block;
+  width: 110px;
+  height: 2px;
+  background: #707070;
+  position: absolute;
+  left: 290px;
+  top: 50%;
+
+}
+.titulo-contacto{
+  width: 606px;
+  color: white;
+  font-family: 'ISOCPEUR', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 70px;
+  }
+
+.logo-contacto{
+  position:fixed;
+  transform: rotate(-15deg);
+  top: 230px;
+  right: 1120px;
+  width: 80px;
+  height: 80px;
+}
+
+.button-contacto{
+  display: flex;
+  font-size: 12px;
+  top: 10px;
+  left: 16.8%;
+  background-image: linear-gradient(-40deg,#C7083F 0%, #C7083F 100%);
+  height: 45px;
+  width: 164px;
+}
+
+.button-contacto:before{
+  content: "";
+  display: block;
+  width: 160px;
+  height: 2px;
+  background: #707070;
+  position: absolute;
+  left: -180px;
+  top: 50%;
+}
+
+.button-contacto:after{
+  content: "";
+  display: block;
+  width: 160px;
+  height: 2px;
+  background: #707070;
+  position: absolute;
+  left: 185px;
+  top: 50%;
+}
+
+.slider-title{
+  font-size: 5vw;
+  color: tomato;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2vw;
+
+}
+
+.card-wrapper{
+  position: relative;
+  width: 100px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  height: 400px;
+  top: 20px;
+}
+
+:active,:hover,:focus{
+  outline: none;
+}
+
+.card{
+  width: 100px;
+  height: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+}
+.card-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #000;
+  transition: 5s;
+
+}
+
+
+a{
+  text-decoration: none;
+}
+
+.box1{
+  width: 250px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 64%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+.box2{
+  width: 250px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 74%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+.box3{
+  width: 250px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 84%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+.box4{
+  width: 250px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 93%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+.box5{
+  width: 250px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 77%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+.box6{
+  width: 250px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 77%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+
+.slide-img{
+  height: 350px;
+}
+
+.slide-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.detail-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-family: calibri;
+}
+
+.type{
+  display: flex;
+  flex-direction: column;
+}
+
+.type a{
+  color: #222222;
+  margin: 5px 0px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding-right: 8px;
+}
+
+.type span{
+  color: rgba(26, 26, 26, 0.5);
+}
+
+.overlay{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.escuchar-btn{
+  width: 160px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: Calibri;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+.escuchar-btn:hover{
+  color: #FFFFFF;
+  background-color: #C7083F;
+  transition: all ease 0.3s;
+}
+
+.overlay{
+  visibility: hidden;
+}
+
+.slide-img:hover .overlay{
+  visibility: visible;
+  animation: fade 0.5s;
+}
+
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.top-semanal{
+  position: fixed;
+  width: 790px;
+  height: 30px;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  top: 430px;
+  right: 10px;
+  background: white;
+
+}
+
+.top-semanal h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 24px;
+  color: #10161E;
+}

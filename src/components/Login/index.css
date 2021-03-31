@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
   
+
 .root {
     width: '85ch';
     margin: 1px;
@@ -69,30 +71,41 @@
   }
   
   /* INFO LOGIN */
+  .caja-logo{
+    position:relative;
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    top: -180px;
+    right: -60px;
+    width: 100px;
+  }
+
   .logo-info{
+    position:fixed;
+    grid-column: 1 / 2;
+    grid-row: 1;
     color: white;
-    top: 0px;
-    margin-left: 10px;
     width: 80px;
     height: 80px;
+
   }
   
   .titulo-proyecto{
-    font-family:'Gidole', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 400px;
+    grid-column: 2 / 2;
+    grid-row: 2;
+    font-family: 'Gidole', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 45px;
     color: white;
-    margin-bottom: 200px;
-    margin-left: 130px;
-  
+
   }
   
-  
-  
   .texto{
+    position:relative;
     font-family: 'Humnst777 Blk BT', Courier, monospace;
     color: white;
     font-size: 40px;
-    margin-bottom: 320px;
+    top: 0px;
   
   }
   /* BOTONES */
@@ -168,41 +181,117 @@
     z-index: 5;
     box-sizing: content-box;
   }
-  
-  /*container4*/
-  
-  .container4:before {
-    position: fixed ;
-    height: 900px;
-    width: 100rem;
-    border-radius: 100rem;
-    top: 36%;
-    right: 65%;
-    background-image: linear-gradient(-70deg, #0000 0%, #0000 100%);
-    opacity: 0.4;
-    transition: 1.8s ease-in-out;
-    z-index: 5;
-    box-sizing: content-box;
-  }
-  
+
   .notas-info{
     position: fixed;
     width: 1120px;
     height: 540px;
     top: 479px;
+    right: 40.5%;
     z-index: 5;
-  
+    transition: 1.8s ease-in-out;
+    box-sizing: content-box;
+
   }
   
   
   
-  /* ANIMATION */
+  /* ANIMACIÓN RESPONSIVE */
   
-  @media (max-width: 870px) {
+  @media (max-width: 1270px) {
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+    /* Circulos y Notas */
     .container {
       min-height: 800px;
       height: 100vh;
     }
+    .container2 {
+      min-height: 800px;
+      height: 100vh;
+    }
+    .container3 {
+      min-height: 800px;
+      height: 100vh;
+    }
+
+    .container:before {
+      width: 1500px;
+      height: 1500px;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 68%;
+      right: initial;
+      top: initial;
+      transition: 2s ease-in-out;
+    }
+  
+    .container2:before {
+      width: 1500px;
+      height: 1500px;
+      transform: translateX(-50%);
+      left: 70%;
+      bottom: 68%;
+      right: initial;
+      top: initial;
+      transition: 2s ease-in-out;
+    }
+
+    .container3:before {
+      width: 1500px;
+      height: 1500px;
+      transform: translateX(-50%);
+      left: 30%;
+      bottom: 68%;
+      right: initial;
+      top: initial;
+      transition: 2s ease-in-out;
+    }
+
+    .notas-info{
+      width: 1420px;
+      height: 640px;
+      transform: translateX(-50%);
+      top: 420px;
+      right: -70.5%;
+      z-index: 5;
+      transition: 1.8s ease-in-out;
+      box-sizing: content-box;
+  
+    }
+
+      /* BOTONES */
+  
+  
+  #Uno{
+    font-size: 14px;
+    background-image: linear-gradient(-40deg,#141B25 0%, #141B25 100%);
+    margin-left: -5%;
+    margin-right: -5%;
+    margin-top: 40px;
+    height: 55px;
+    width: 80%;
+    transition: 2s ease-in-out;
+
+  }
+  
+  .ButtonDos{
+    font-family: 'Gidole', Courier, monospace;
+    font-size: 14px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    height: 55px;
+    margin-top: 10px;
+    width: 80%; 
+    transition: 2s ease-in-out;
+  
+  }
+
     .signin-signup {
       width: 100%;
       top: 95%;
@@ -214,92 +303,145 @@
     .container.sign-up-mode .signin-signup {
       left: 50%;
     }
-  
-    .panels-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 2fr 1fr;
-    }
-  
-    .panel {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      padding: 2.5rem 8%;
-      grid-column: 1 / 2;
-    }
-  
-    .right-panel {
-      grid-row: 3 / 4;
-    }
-  
-    .left-panel {
-      grid-row: 1 / 2;
-    }
-  
-    .image {
-      width: 200px;
-      transition: transform 0.9s ease-in-out;
-      transition-delay: 0.6s;
-    }
-  
-    .panel .content {
-      padding-right: 15%;
-      transition: transform 0.9s ease-in-out;
-      transition-delay: 0.8s;
-    }
-  
-    .panel h3 {
-      font-size: 1.2rem;
-    }
-  
-    .panel p {
-      font-size: 0.7rem;
-      padding: 0.5rem 0;
-    }
-  
-    .btn.transparent {
-      width: 110px;
-      height: 35px;
-      font-size: 0.7rem;
-    }
-  
-    .container:before {
-      width: 1500px;
-      height: 1500px;
-      transform: translateX(-50%);
-      left: 30%;
-      bottom: 68%;
-      right: initial;
-      top: initial;
-      transition: 2s ease-in-out;
-    }
-  
-    .container.sign-up-mode:before {
-      transform: translate(-50%, 100%);
-      bottom: 32%;
-      right: initial;
-    }
-  
-    .container.sign-up-mode .left-panel .image,
-    .container.sign-up-mode .left-panel .content {
-      transform: translateY(-300px);
-    }
-  
-    .container.sign-up-mode .right-panel .image,
-    .container.sign-up-mode .right-panel .content {
-      transform: translateY(0px);
-    }
-  
-    .right-panel .image,
-    .right-panel .content {
-      transform: translateY(300px);
-    }
+
+
   
     .container.sign-up-mode .signin-signup {
       top: 5%;
       transform: translate(-50%, 0);
     }
+  
+  /* INFO LOGIN */
+  .caja-logo{
+    top: -380px;
+    right: -260px;
+    transition: 1s 0.8s ease-in-out;
+
+  }
+
+  
+  .texto{
+    font-size: 24px;
+    top: -300px;
+    right: -310px;
+    transition: 1s 0.8s ease-in-out;
+
+  }
   }
   
   
+  @media (max-width: 1160px) {
+    #Uno{
+      font-size: 14px;
+      background-image: linear-gradient(-40deg,#141B25 0%, #141B25 100%);
+      margin-left: -5%;
+      margin-right: -5%;
+      margin-top: 40px;
+      height: 55px;
+      width: 60%;
+    }
+    
+    .ButtonDos{
+      font-size: 14px;
+      display: flex;
+      padding: 5px;
+      align-items: center;
+      height: 55px;
+      margin-top: 10px;
+      width: 60%; 
+    
+    }
+
+      /* INFO LOGIN */
+  .caja-logo{
+    top: -380px;
+    right: -180px;
+    transition: 1s 0.8s ease-in-out;
+
+  }
+
   
+  .texto{
+    font-size: 20px;
+    top: -300px;
+    right: -230px;
+    transition: 1s 0.8s ease-in-out;
+
+  }
+
+  .notas-info{
+    width: 1320px;
+    height: 540px;
+    transform: translateX(-50%);
+    top: 560px;
+    right: -76.5%;
+    z-index: 5;
+    transition: 1.8s ease-in-out;
+    box-sizing: content-box;
+
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .caja-logo{
+    top: -380px;
+    right: -110px;
+    transition: 1s 0.8s ease-in-out;
+
+  }
+  
+  .titulo-proyecto{
+    font-size: 35px;
+  }
+
+  .texto{
+    font-size: 18px;
+    top: -300px;
+    right: -160px;
+    transition: 1s 0.8s ease-in-out;
+
+  }
+
+  
+  .notas-info{
+    width: 920px;
+    height: 440px;
+    transform: translateX(-50%);
+    top: 640px;
+    right: -96.5%;
+    z-index: 5;
+    transition: 1.8s ease-in-out;
+    box-sizing: content-box;
+
+  }
+
+}
+
+
+  @media (max-width: 580px) {
+
+          /* INFO LOGIN */
+  .caja-logo{
+
+    top: -380px;
+    right: -10px;
+    transition: 1s 0.8s ease-in-out;
+
+  }
+  
+  .titulo-proyecto{
+    font-size: 35px;
+  }
+
+  .texto{
+    font-size: 18px;
+    top: -260px;
+    right: -130px;
+    transition: 1s 0.8s ease-in-out;
+
+  }
+
+
+}
